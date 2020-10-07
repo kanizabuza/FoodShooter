@@ -30,8 +30,8 @@ MonoBehaviour:
     _shotInterval: 0.2
     _power: 10
     _maxAmmo: 30
-    _recoilX: 3
+    _recoilX: 0
     _recoilY: 0.1
-    _accuracy: 2
+    _accuracy: 10
     _bullet: {fileID: 4335156217823609758, guid: 71d9bdae145e741adabd686b3d52d872,
       type: 3}

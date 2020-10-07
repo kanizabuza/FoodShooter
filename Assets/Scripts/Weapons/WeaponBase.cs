@@ -18,15 +18,15 @@ namespace Weapons
         private void Start()
         {
             _myCamera = GetComponentInParent<Camera>();
-            _weapon = WeaponManager.GetWeaponData(_weapon.ID);
-
+            _weapon = WeaponManager.GetWeaponData(_weaponId);
             //aSource = GameObject.Find("SEAudio").GetComponent<AudioSource>();
             //aClip = Resources.Load("Fire") as AudioClip;
         }
 
         public virtual void Fire()
         {
-            Ray ray = _myCamera.ScreenPointToRay(new Vector3(Screen.width / 2f + 17, Screen.height / 2f - 15, 0) + new Vector3(Random.Range(-_weapon.Accuracy, _weapon.Accuracy), Random.Range(-_weapon.Accuracy, _weapon.Accuracy), 0));
+            var center = new Vector3(Screen.width / 2f/* + 17*/, Screen.height / 2f /*- 15*/, 0) + new Vector3(Random.Range(-_weapon.Accuracy, _weapon.Accuracy), Random.Range(-_weapon.Accuracy, _weapon.Accuracy), 0);
+            Ray ray = _myCamera.ScreenPointToRay(center);
             RaycastHit hit;
             var point = new Vector3();
             if (Physics.Raycast(ray, out hit, 1000))
