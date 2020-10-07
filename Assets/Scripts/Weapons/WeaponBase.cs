@@ -18,7 +18,7 @@ namespace Weapons
         private void Start()
         {
             _myCamera = GetComponentInParent<Camera>();
-            _weapon = WeaponManager.GetWeaponData(0);
+            _weapon = WeaponManager.GetWeaponData(_weapon.ID);
 
             //aSource = GameObject.Find("SEAudio").GetComponent<AudioSource>();
             //aClip = Resources.Load("Fire") as AudioClip;
@@ -51,7 +51,6 @@ namespace Weapons
             //pun入れたらコメント消して
             //PhotonNetwork.Instantiate(weapon.Bullet.name, muzzle.transform.position, muzzle.transform.rotation);
         }
-
     }
 }
 

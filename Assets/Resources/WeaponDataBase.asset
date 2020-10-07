@@ -16,7 +16,7 @@ MonoBehaviour:
   - _name: HG
     _id: 0
     _weaponType: 0
-    _shotInterval: 1
+    _shotInterval: 0
     _power: 1
     _maxAmmo: 12
     _recoilX: 1
@@ -27,7 +27,7 @@ MonoBehaviour:
   - _name: AR
     _id: 1
     _weaponType: 1
-    _shotInterval: 0.3
+    _shotInterval: 0.2
     _power: 10
     _maxAmmo: 30
     _recoilX: 3

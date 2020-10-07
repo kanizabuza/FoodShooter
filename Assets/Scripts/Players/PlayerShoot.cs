@@ -1,12 +1,11 @@
 ﻿using System;
-using System.Collections;
-using System.Collections.Generic;
 using UniRx;
 using UnityEngine;
 using Weapons;
 
 namespace Players
 {
+    [DefaultExecutionOrder(1)]
     public class PlayerShoot : MonoBehaviour
     {
         private PlayerInput _input;
@@ -30,7 +29,6 @@ namespace Players
                     _weapon.Fire();
                     _magazineManager.magazineInfo.NowAmmo--;
                 }).AddTo(gameObject);
-
             
             _input.SemiAutoStream
                 //.Where(_ => !GameManager.Instance.IsGameEnd)
