@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 namespace Weapons
 {
+    [DefaultExecutionOrder(-1)]
     public static class WeaponManager
     {
         private static readonly WeaponDataBase _weaponDataBase;

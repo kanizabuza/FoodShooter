@@ -1,5 +1,4 @@
-﻿
-namespace Weapons
+﻿namespace Weapons
 {
     public class TestWeapon : WeaponBase
     {
